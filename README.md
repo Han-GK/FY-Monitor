@@ -1,7 +1,7 @@
 # FY-Monitor-Docker
 部署命令:
 
-docker run --name fy-monitor  -d hanguokun/fy-monitor:latest
+'docker run --name fy-monitor  -d hanguokun/fy-monitor:latest'
 
 
 [点击跳转到DockerHub项目页面](https://hub.docker.com/repository/docker/hanguokun/fy-monitor)

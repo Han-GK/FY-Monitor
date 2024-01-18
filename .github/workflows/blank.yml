@@ -27,6 +27,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: yourusername/yourimage:latest
+        tags: hanguokun/fy-monitor:latest
         platforms: linux/amd64,linux/arm64,linux/arm/v7
 

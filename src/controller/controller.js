@@ -38,7 +38,7 @@ module.exports = {
                 c: (Number.parseFloat(OsUtil.cpuUsage) * 100).toFixed(2),
                 m: OsUtil.freeMem,
                 mt: OsUtil.totalMem,
-                t: 0,
+                t: OsUtil.temp,
                 d: (OsUtil.downloadSpeed) * 8,
                 u: (OsUtil.uploadSpeed) * 8,
             }
@@ -54,7 +54,8 @@ module.exports = {
             upload: getSpeedStr(OsUtil.uploadSpeed),
             download: getSpeedStr(OsUtil.downloadSpeed),
             port: OsUtil.port,
-            ipaddr: OsUtil.ipaddr
+            ipaddr: OsUtil.ipaddr,
+            temp:OsUtil.temp
         }
         res.end(JSON.stringify(obj));
     },

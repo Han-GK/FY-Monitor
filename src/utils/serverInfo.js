@@ -10,7 +10,8 @@ const serverInfo = {
 	uploadSpeed: 0,// 上传网速
 	downloadSpeed: 0, // 下载网速
 	port: 49101,
-	ipaddr: ''
+	ipaddr: '',
+	temp:0
 }
 
 /**
@@ -56,6 +57,9 @@ setInterval(() => {
 		serverInfo.downloadSpeed = res[0].rx_sec / 1024;
 		serverInfo.uploadSpeed = res[0].tx_sec / 1024;
 	});
+	si.cpuTemperature().then(res=>{
+		serverInfo.temp = res.main==null?0:res.main
+	})
 	getIpAddr();
 
 }, 1000)
